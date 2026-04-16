@@ -1,5 +1,7 @@
+package com.example;
+
 import java.util.Scanner;
-package com.example; 
+
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -25,5 +27,7 @@ public class App {
         System.out.println("User: " + name + " (ID: " + id + ")");
         System.out.println("Books Issued: " + books);
         System.out.println("Total Fine: $" + fine);
+        
+        sc.close();
     }
 }
