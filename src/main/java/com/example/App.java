@@ -1,25 +1,29 @@
-package com.example;
-public class App {
-    public int add(int a, int b) {
-        return a + b;
-    }
-    public int subtract(int a, int b) {
-        return a - b;
-    }
-    public int multiply(int a, int b) {
-        return a * b;
-    }
-    public int divide(int a, int b) {
-        if (b == 0) {
-            throw new ArithmeticException("Cannot divide by zero");
-        }
-        return a / b;
-    }
+import java.util.Scanner;
+
+public class LibrarySystem {
     public static void main(String[] args) {
-        App calculator = new App(); 
-        System.out.println("Addition: " + calculator.add(10,5));
-        System.out.println("Subtraction: " + calculator.subtract(10,5));
-        System.out.println("Multiplication: " + calculator.multiply(10,5));
-        System.out.println("Division: " + calculator.divide(10,5));
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Name: ");
+        String name = sc.nextLine();
+        System.out.print("Enter ID: ");
+        String id = sc.nextLine();
+        System.out.print("Number of books: ");
+        int books = sc.nextInt();
+        System.out.print("Days borrowed: ");
+        int days = sc.nextInt();
+
+        int limit = 7;
+        int finePerDay = 2;
+        int fine = 0;
+
+        if (days > limit) {
+            fine = (days - limit) * finePerDay * books;
+        }
+
+        System.out.println("\n--- Borrowing Status ---");
+        System.out.println("User: " + name + " (ID: " + id + ")");
+        System.out.println("Books Issued: " + books);
+        System.out.println("Total Fine: $" + fine);
     }
 }
