@@ -16,7 +16,7 @@ public class App {
         int days = sc.nextInt();
 
         int limit = 7;
-        int finePerDay = 2;
+        int finePerDay = 5;
         int fine = 0;
 
         if (days > limit) {
