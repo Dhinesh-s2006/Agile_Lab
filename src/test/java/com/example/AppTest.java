@@ -4,7 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class LibrarySystemTest {
+public class AppTest {
 
     @Test
     public void testFineCalculation() {
@@ -18,7 +18,7 @@ public class LibrarySystemTest {
         System.setOut(new PrintStream(outputStream));
 
         // 3. Run the Program
-        LibrarySystem.main(new String[]{});
+        AppTest.main(new String[]{});
 
         // 4. Verify Result
         String output = outputStream.toString();
